@@ -19,12 +19,12 @@ void setup()
 
 void blink(int delayTime) {
     // Blink LED on and off
-	digitalWrite(MY_LED, HIGH);
-	delay(delayTime);
-	digitalWrite(MY_LED, LOW);
+    digitalWrite(MY_LED, HIGH);
+    delay(delayTime);
+    digitalWrite(MY_LED, LOW);
 	
-	// Pause after blinking LED
-	delay(PAUSE);
+    // Pause after blinking LED
+    delay(PAUSE);
 }
 
 int mockSunlightRiseFall(int value) {
@@ -42,5 +42,5 @@ void loop()
     Particle.publish("sunlight", String(sunlightValue));
     
     blink(PAUSE);
-	delay(10000);
+    delay(10000);
 }
